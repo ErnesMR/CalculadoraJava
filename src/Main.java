@@ -8,7 +8,6 @@ public class Main {
         int numero1=0;
         int numero2=0;
         int opcion=0;
-        int salir=0;
         int resultado=0;
         BufferedReader s= new BufferedReader((new InputStreamReader((System.in))));
         do {
@@ -23,48 +22,31 @@ public class Main {
             System.out.println("2.- resta");
             System.out.println("3.- multiplicacion");
             System.out.println("4.- division");
+            System.out.println("5.- salir");
             opcion=Integer.parseInt(s.readLine());
 
             switch (opcion){
                 case 1:
                     resultado=numero1+numero2;
                     System.out.println("El resultado de la suma es: " +resultado);
-                    System.out.println("Desea continuar con el programa ?");
-                    System.out.println("1.- salir");
-                    System.out.println("continuar - cualquier numero");
-                    opcion=Integer.parseInt(s.readLine());
                     break;
                 case 2:
                     resultado=numero1-numero2;
                     System.out.println("El resultado de la resta es: " +resultado);
-                    System.out.println("Desea continuar con el programa ?");
-                    System.out.println("1.- salir");
-                    System.out.println("continuar - cualquier numero");
-                    opcion=Integer.parseInt(s.readLine());
                     break;
                 case 3:
                     resultado=numero1*numero2;
                     System.out.println("El resultado de la multiplicacion es: " +resultado);
-                    System.out.println("Desea continuar con el programa ?");
-                    System.out.println("1.- salir");
-                    System.out.println("continuar - cualquier numero");
-                    opcion=Integer.parseInt(s.readLine());
                     break;
                 case 4:
                     resultado=numero1/numero2;
                     System.out.println("El resultado de la division es: " +resultado);
-                    System.out.println("Desea continuar con el programa ?");
-                    System.out.println("1.- salir");
-                    System.out.println("continuar - cualquier numero");
-                    opcion=Integer.parseInt(s.readLine());
+
                     break;
 
                 case 5:
                     System.out.println("Gracias por utilizar el programa, hasta pronto ");
-                    System.out.println("Desea continuar con el programa ?");
-                    System.out.println("1.- salir");
-                    System.out.println("continuar - cualquier numero");
-                    opcion=Integer.parseInt(s.readLine());
+
                     break;
                 default:
                     System.out.println("Opcion no encontrada");
@@ -72,7 +54,7 @@ public class Main {
             }
 
 
-        }while (salir==1);
+        }while (opcion!=5);
 
     }
 }
